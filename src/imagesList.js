@@ -37,7 +37,7 @@ const imagesList = [
   },
   {
     id: 10,
-    title: 'Persik11'
+    title: 'Persik10'
   },
   {
     id: 11,
