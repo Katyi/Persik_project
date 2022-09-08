@@ -55,8 +55,8 @@ const Container = () => {
         <div className="restofinfo">
         <div className="container1">
           <div className="tn-atom4">
-            <img src={Myimage1} alt="Фото1"style={{width: 670, padding: 15}}/>
-            <img src={Myimage2} alt="Фото2"style={{width: 670, padding: 15}}/>
+            <img src={Myimage1} alt="Фото1" className="pictureMedium"/>
+            <img src={Myimage2} alt="Фото2" className="pictureMedium"/>
           </div>
           <div className="tn-atom5">
             <div className="storyPersik">

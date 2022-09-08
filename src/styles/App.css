@@ -9,109 +9,86 @@ body {
   border: 1px solid transparent;
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
   top: 0;
+  left: 0;
   width: 100%;
-  height: 100px;
   position: fixed;
   z-index: 9999;
   display: table;
   vertical-align: middle;
-  box-sizing: border-box;
-}
-
-.footer {
-  background-color: #f5f3f1;
-  background-position: center center;
-  border: 1px solid transparent;
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  position: fixed;
-  z-index: 9999;
-  display: table;
-  vertical-align: middle;
-  box-sizing: border-box;
 }
 
 .picturesmall {
   position: absolute;
-  box-sizing: border-box;
-  display: table;
-  vertical-align: middle;
   border-radius: 50%;
-  margin-left: 30px;
-  margin-top: 15px;
-  width: 70px;
-  height: 70px;
+  margin-left: 2%;
+  margin-top: 1%;
+  width: 5.4%;
+  height: 70%;
 }
 
 .headName {
-  position: absolute;
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
+  position: relative;
   border: 1px solid transparent;
-  top: -15px;
-  left: 150px;
+  width: 50%;
+  height: 100%;
+  left: 10%;
   font-family: Comic Sans MS, Comic Sans, fantasy;
   font-variant: small-caps;
-  font-size: 22px;
+  font-size: 1.2vw;
 }
 
 .container {
   position: relative;
   border: 1px solid transparent;
   background-color: #f0f4f5;
-  top: 0px;
+  top: 5vw;
   width: 100%;
-  height: 900px;
+  height: 50vw;
 }
 
 .aboutPersik {
-  /* border: 1px solid transparent; */
   border: 1px solid transparent;
-  width: 49%;
-  height: 750px;
+  width: 45%;
+  height: 60%;
   position: absolute;
-  top: 140px;
-  left: 5px;
+  top: 17%;
+  left: 2%;
   z-index: 9;
 }
 
 .textAboutPersik {
   position: absolute;
   border: 1px solid transparent;
-  width: 800px;
-  top: 100px;
-  left: 50px;
+  width: 100%;
+  top: 3vw;
+  left: 1vw;
   font-family: Comic Sans MS, Comic Sans, fantasy;
   font-variant: small-caps;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 2.8vw;
 }
 
 .restTextAboutPersik {
   position: absolute;
   border: 1px solid transparent;
-  width: 800px;
-  top: 280px;
-  left: 50px;
+  width: 95%;
+  top: 12vw;
+  left: 1vw;
   font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 25px;
+  font-size: 1.3vw;
 }
 
 .btn1 {
-  padding: 5px 15px;
   color: white;
   background: #000000;
   position: absolute;
   font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 17px;
+  font-size: 1vw;
   border: 1px solid black;
-  top: 530px;
-  left: 100px;
-  width: 200px;
-  height: 60px;
+  top: 26vw;
+  left: 6vw;
+  width: 10vw;
+  height: 3vw;
   cursor: pointer;
 }
 
@@ -119,80 +96,39 @@ body {
   position: absolute;
   display: table;
   border: 1px solid transparent;
-  top: 530px;
-  left: 321px;
-  width: 200px;
-  height: 60px;
-  padding: 5px 15px;
+  top: 26vw;
+  left: 20vw;
+  width: 10vw;
+  height: 3vw;
   color: black;
   font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 17px;
-  cursor: pointer;
-}
-
-.btn3 {
-  padding: 5px 15px;
-  color: #566573;
-  background: transparent;
-  position: absolute;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 17px;
-  border: 3px solid #566573;
-  top: 530px;
-  left: 850px;
-  width: 200px;
-  height: 60px;
-  cursor: pointer;
-}
-
-.btn4 {
-  padding: 5px 15px;
-  color: #566573;
-  background: transparent;
-  position: absolute;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 17px;
-  border: 3px solid #566573;
-  top: 130px;
-  left: 850px;
-  width: 200px;
-  height: 60px;
+  font-size: 1vw;
   cursor: pointer;
 }
 
 .panorama {
   position: fixed;
-  border: 1px solid transparent;
+  border: 1% solid transparent;
   width: 100%;
-  height: 1500px;
+  height: 120vw;
 }
 
 .picturebig {
   position: absolute;
-  top: -200px;
-  left: 15px;
-  width: 97%;
-  height: 70%;
+  top: -8.5vw;
+  left: 1vw;
+  width: 98%;
+  height: 44.5%;
   z-index: 0;
   background-attachment: fixed;
-}
-
-.pictureMedium {
-  position: absolute;
-  /* top: 130px; */
-  /* left: 15px; */
-  width: 30%;
-  z-index: 0;
-  /* background-attachment: fixed; */
 }
 
 .tn-atom3 {
   position: relative;
   border: 0px solid transparent;
-  bottom: 0;
+  top: 2vw;
   display: table;
-  box-sizing: content-box;
-  width: 100%;
+  width: 101%;
   height: 100%;
 }
 
@@ -200,19 +136,20 @@ body {
   position: relative;
   background-color: #f5f3f1;
   border: 0px solid transparent;
-  top: -20px;
-  width: 100%;
-  height: 1600px;
+  width: 101%;
+  height: 86vw;
+  bottom: -1vw;
 }
 
 .container1 {
   position: relative;
-  width: 100%;
-  max-width: 1400px;
+  width: 80%;
+  height: 90%;
+  top: 6vw;
   margin-left: auto;
   margin-right: auto;
-  min-width: 560px;
-  height: 1500px;
+  margin-bottom: auto;
+  height: 75vw;
   display: table;
   border: 0px solid transparent;
 }
@@ -224,6 +161,12 @@ body {
   top: 0;
   left: 0;
   border: 1px solid transparent;
+}
+
+.pictureMedium {
+  top: 1vw;
+  padding: 0.5em;
+  width: 84%;
 }
 
 .tn-atom5 {
@@ -239,28 +182,95 @@ body {
   position: absolute;
   border: 1px solid transparent;
   width: 100%;
-  top: 5px;
   text-align: center;
   font-family: Comic Sans MS, Comic Sans, fantasy;
   font-variant: small-caps;
   font-weight: 900;
-  font-size: 45px;
+  font-size: 2vw;
 }
 
 .tn-atom6 {
   position: absolute;
   border: 1px solid transparent;
   width: 100%;
-  top: 77px;
+  top: 4vw;
+  bottom: 2vw;
   font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 20px;
+  font-size: 1.05vw;
+}
+
+.footer {
+  background-color: #f5f3f1;
+  background-position: center center;
+  border: 0px solid transparent;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+  bottom: 0;
+  width: 100%;
+  height: 3vw;
+  position: fixed;
+  z-index: 9999;
+  display: table;
+  vertical-align: middle;
+  box-sizing: border-box;
 }
 
 .aboutPage {
-  font-size: 30px;
-  margin-top: 270px;
+  font-size: 2vw;
+  margin-top: 20vw;
   color: #566573;
   font-family: Comic Sans MS, Comic Sans, fantasy;
   font-variant: small-caps;
   text-align: center;
+}
+
+.btn3 {
+  padding: 0.2vw 0.2vw;
+  color: #566573;
+  background: transparent;
+  position: absolute;
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  font-size: 0.8vw;
+  font-weight: 900;
+  border: 0.2vw solid #566573;
+  top: 30vw;
+  left: 45vw;
+  width: 10vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+.container2 {
+  position: relative;
+  top: 11vw;
+  left: 2vw;
+  /* margin-left: auto; */
+  display: block;
+  
+}
+
+.btn4 {
+  padding: 0.2vw 0.2vw;
+  color: #566573;
+  background: transparent;
+  position: absolute;
+  font-family: Comic Sans MS, Comic Sans, fantasy;
+  font-size: 0.8vw;
+  font-weight: 900;
+  border: 0.2vw solid #566573;
+  top: -3vw;
+  left: 45vw;
+  width: 10vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+.tn-atom7 {
+  display: inline-flex;
+  padding: 1vw;
+}
+
+.pictureForAlbum {
+  margin-top: 0.5vw;
+  padding: 0.5vw;
+  width: 29vw;
 }
