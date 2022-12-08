@@ -1,276 +1,395 @@
 body {
-  margin: 1;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
   background-color: #f5f3f1;
-}
-
-.headbox {
-  background-color: #f5f3f1;
-  background-position: center center;
-  border: 1px solid transparent;
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
-  top: 0;
-  left: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 9999;
-  display: table;
-  vertical-align: middle;
-}
-
-.picturesmall {
-  position: absolute;
-  border-radius: 50%;
-  margin-left: 2%;
-  margin-top: 1%;
-  width: 5.4%;
-  height: 70%;
-}
-
-.headName {
-  position: relative;
-  border: 1px solid transparent;
-  width: 50%;
-  height: 100%;
-  left: 10%;
   font-family: Comic Sans MS, Comic Sans, fantasy;
   font-variant: small-caps;
-  font-size: 1.2vw;
+  font-size: 16px;
+  overflow-x: hidden;
 }
-
+/* ------------------------HEADER component Navbar------------------------------------------ */
+.headbox {
+  position: fixed;
+  background-color: #f5f3f1;
+  box-shadow: 10px 5px 5px darkgray;
+  width: 100vw;
+  height: 14vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+.picturesmall {
+  border-radius: 50%;
+  height: 10vh;
+  margin-left: 3vw;
+}
+.headName {
+  margin-left: 6vw;
+  font-size: 30px;
+}
+/*                                    MAIN                                                    */
+.wrapper {
+  background-color: #f5f3f1;
+  display: flex;
+  flex-direction: column;
+  /* overflow-x: hidden; */
+  /* width: 1; */
+}
 .container {
-  position: relative;
-  border: 1px solid transparent;
-  background-color: #f0f4f5;
-  top: 5vw;
-  width: 100%;
-  height: 50vw;
+  /* margin-top: 16vh; */
+  /* width: 113vw; */
+  height: 93vh;
 }
-
 .aboutPersik {
-  border: 1px solid transparent;
   width: 45%;
   height: 60%;
   position: absolute;
-  top: 17%;
-  left: 2%;
+  top: 25vh;
+  left: 5vw;
   z-index: 9;
 }
-
 .textAboutPersik {
   position: absolute;
-  border: 1px solid transparent;
-  width: 100%;
-  top: 3vw;
+  width: 50vw;
   left: 1vw;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-variant: small-caps;
   font-weight: 900;
-  font-size: 2.8vw;
+  font-size: 48px;
 }
-
 .restTextAboutPersik {
   position: absolute;
-  border: 1px solid transparent;
-  width: 95%;
-  top: 12vw;
+  width: 50vw;
+  top: 18vh;
   left: 1vw;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
   font-size: 1.3vw;
+  font-size: 24px;
+  font-weight: 700;
 }
-
 .btn1 {
   color: white;
   background: #000000;
   position: absolute;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 1vw;
+  font-size: 16px;
+  font-weight: 700;
   border: 1px solid black;
-  top: 26vw;
+  top: 52vh;
   left: 6vw;
-  width: 10vw;
-  height: 3vw;
+  width: 160px;
+  height: 47px;
   cursor: pointer;
 }
-
 .btn2 {
   position: absolute;
   display: table;
   border: 1px solid transparent;
-  top: 26vw;
-  left: 20vw;
-  width: 10vw;
-  height: 3vw;
+  top: 52vh;
+  left: 22vw;
+  width: 160px;
+  height: 47px;
   color: black;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 1vw;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
 }
-
 .panorama {
   position: fixed;
-  border: 1% solid transparent;
-  width: 100%;
-  height: 120vw;
 }
-
 .picturebig {
-  position: absolute;
-  top: -8.5vw;
-  left: 1vw;
-  width: 98%;
-  height: 44.5%;
+  height: 113vh;
+  margin-left: 1vw;
   z-index: 0;
-  background-attachment: fixed;
 }
-
 .tn-atom3 {
   position: relative;
-  border: 0px solid transparent;
-  top: 2vw;
-  display: table;
-  width: 101%;
-  height: 100%;
+  top: 1vh;
+  width: 100vw;
 }
-
 .restofinfo {
   position: relative;
   background-color: #f5f3f1;
-  border: 0px solid transparent;
-  width: 101%;
-  height: 86vw;
-  bottom: -1vw;
+  width: 100vw;
+  /* padding-bottom: auto; */
 }
-
 .container1 {
   position: relative;
   width: 80%;
-  height: 90%;
-  top: 6vw;
+  top: -5vw;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
   height: 75vw;
-  display: table;
+  /* display: table; */
   border: 0px solid transparent;
 }
-
 .tn-atom4 {
   position: absolute;
   width: 49%;
   height: 100%;
-  top: 0;
+  top: 6vh;
   left: 0;
-  border: 1px solid transparent;
 }
-
 .pictureMedium {
-  top: 1vw;
-  padding: 0.5em;
+  margin-top: 1vw;
   width: 84%;
 }
-
 .tn-atom5 {
   position: absolute;
   width: 49%;
   height: 100%;
   top: 0;
   right: 0;
-  border: 1px solid transparent;
 }
-
 .storyPersik {
   position: absolute;
   border: 1px solid transparent;
   width: 100%;
   text-align: center;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-variant: small-caps;
   font-weight: 900;
   font-size: 2vw;
 }
-
 .tn-atom6 {
   position: absolute;
   border: 1px solid transparent;
   width: 100%;
   top: 4vw;
   bottom: 2vw;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
   font-size: 1.05vw;
 }
-
-.footer {
+/*                           FOOTER--------------------------------------------------------------------------------------- */
+/* .footer {
   background-color: #f5f3f1;
   background-position: center center;
   border: 0px solid transparent;
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
   bottom: 0;
   width: 100%;
-  height: 3vw;
+  height: 0vw;
   position: fixed;
   z-index: 9999;
   display: table;
   vertical-align: middle;
   box-sizing: border-box;
-}
-
+} */
+/*                                                 ABOUT----------------------------------------------------- */
 .aboutPage {
-  font-size: 2vw;
+  font-size: 30px;
   margin-top: 20vw;
   color: #566573;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
   font-variant: small-caps;
   text-align: center;
 }
-
 .btn3 {
-  padding: 0.2vw 0.2vw;
+  padding: 2px 2px;
   color: #566573;
   background: transparent;
   position: absolute;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 0.8vw;
-  font-weight: 900;
-  border: 0.2vw solid #566573;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid #566573;
   top: 30vw;
   left: 45vw;
-  width: 10vw;
-  height: 3vw;
+  width: 200px;
+  height: 60px;
   cursor: pointer;
 }
-
+/*                  PAGE ALBUM ------------------------------------------------------------*/
 .container2 {
   position: relative;
-  top: 11vw;
-  left: 2vw;
-  /* margin-left: auto; */
+  top: 27vh;
+  left: 1vw;
   display: block;
-  
 }
-
 .btn4 {
-  padding: 0.2vw 0.2vw;
+  padding: 2px 2px;
   color: #566573;
   background: transparent;
   position: absolute;
-  font-family: Comic Sans MS, Comic Sans, fantasy;
-  font-size: 0.8vw;
+  font-size: 18px;
   font-weight: 900;
-  border: 0.2vw solid #566573;
-  top: -3vw;
+  border: 2px solid #566573;
+  top: -9vh;
   left: 45vw;
-  width: 10vw;
-  height: 3vw;
+  width: 200px;
+  height: 60px;
   cursor: pointer;
 }
-
 .tn-atom7 {
   display: inline-flex;
-  padding: 1vw;
+  padding: 1px;
 }
-
 .pictureForAlbum {
-  margin-top: 0.5vw;
-  padding: 0.5vw;
-  width: 29vw;
+  margin-top: 2px;
+  padding: 2px;
+  width: 32vw;
+}
+/*                                   ADAPTIVES----------------------------------------------------- */
+/* tablet */
+@media (min-width: 700px) and (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
+  .headbox {
+    width: 100%;
+  }
+  .headName {
+    font-size: 3vw;
+  }
+  .aboutPersik {
+    width: 100%;
+  }
+  .textAboutPersik {
+    width: 90%;
+    font-size: 4.5vw;
+  }
+  .restTextAboutPersik {
+    top: 15vw;
+    font-size: 2.5vw;
+    width: 87%;
+  }
+  .btn1 {
+    font-size: 1.4vw;
+    width: 16vw;
+    height: 5vw;
+  }
+  .btn2 {
+    font-size: 1.4vw;
+    width: 16vw;
+    height: 5vw;
+    left: 26vw;
+  }
+  .storyPersik {
+    font-size: 30px;
+    top: -3%;
+  }
+  .restofinfo {
+    height: 130vh;
+    width: 100%;
+  }
+  .container1 {
+    /* position: relative; */
+    /* width: 80%; */
+    top: 0vw;
+    /* margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto; */
+    /* height: 75vw; */
+    /* display: table; */
+    /* border: 0px solid transparent; */
+  }
+  .tn-atom6 {
+    font-size: 1.8vw;
+  }
+  .tn-atom5 {
+    width: 100%;
+  }
+  .tn-atom4 {
+    display: none;
+  }
+  .picturebig img {
+    object-position: right center;
+    /* height: 97vh;
+    margin-left: 1vw;
+    z-index: 0; */
+
+  }
+  .aboutPage {
+    margin-top: 50vh;
+  }
+  .btn3 {
+    top: 70vh;
+    left: 40vh;
+  }
+  .pictureForAlbum {
+    width: 48vw;
+  }
+}
+/* mobile */
+@media (max-width: 700px) {
+  .headName {
+    font-size: 4.6vw;
+  }
+  .wrapper {
+    /* width: 97vh; */
+  }
+  .aboutPersik {
+    width: 95vw;
+    height: 120vh;
+  }
+  .textAboutPersik {
+    width: 95%;
+    font-size: 30px;
+  }
+  .restTextAboutPersik {
+    top: 20vh;
+    /* font-size: 18px; */
+    width: 80%;
+  }
+  .btn1 {
+    top: 63vh;
+    font-size: 14px;
+    width: 80px;
+    height: 40px;
+  }
+  .btn2 {
+    top: 63vh;
+    font-size: 14px;
+    width: 80px;
+    height: 40px;
+    left: 120px;
+  }
+  .storyPersik {
+    font-size: 30px;
+    top: -12%;
+  }
+  .container1 {
+    top: 6vh;
+  }
+  .restofinfo {
+    /* top: 15px; */
+    height: 106vh;
+  }
+  .tn-atom6 {
+    font-size: 12px;
+    /* top: 42px;s */
+  }
+  .tn-atom5 {
+    width: 100%;
+  }
+  .tn-atom4 {
+    display: none;
+  }
+  .picturebig {
+    height: 120vh;
+    margin-left: 1vw;
+    z-index: 0;
+  }
+  .aboutPage {
+    font-size: 25px;
+    width: 90%;
+    margin-top: 50vh;
+    margin-left: 5vh;
+  }
+  .btn3 {
+    top: 70vh;
+    font-size: 16px;
+    width: 140px;
+    height: 50px;
+    left: 20vh;
+  }
+  .container2 {
+    position: relative;
+    top: 27vh;
+    left: 1vw;
+    display: block;
+  }
+  .btn4 {
+    left: 35vw;
+  }
+  .tn-atom7 {
+    display: inline-flex;
+    padding: 1px;
+  }
+  .pictureForAlbum {
+    width: 97vw;
+  }
 }

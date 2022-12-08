@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Container = () => {
   let navigate = useNavigate();
   return (
-    <div>
+    <div className='wrapper'>
       <div className="container">
         <div className="aboutPersik">
           <div className="textAboutPersik">
