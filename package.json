@@ -1,5 +1,6 @@
 {
   "name": "persik_project",
+  "homepage":"https://katyi.github.io/Persik_project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
