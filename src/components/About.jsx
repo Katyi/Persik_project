@@ -1,19 +1,30 @@
 import React from "react";
-import MyButton from "./MyButton";
-import { useNavigate } from 'react-router-dom';
+import { Box, Stack, Typography } from "@mui/material";
 
 const About = () => {
-  let navigate = useNavigate();
   return (
-    <div className="aboutPage">
-      This application is made about my lovely cat Persik.<br />
-      My contacts: egorova.aleksandra@gmail.com
-      <MyButton className="btn3" onClick={() => navigate('/container')}>
-        Back to main page
-      </MyButton>
-
-
-    </div>
+    <Box
+      height={'100vh'}
+    bgcolor={'#F5F3F1'}
+    >
+      <Stack
+        direction={"column"}
+        alignItems={'center'}
+        justifyContent={'center'}
+      >
+        <Typography
+          fontSize={{xs: 20, sm: 25, md: 40}}
+          fontWeight={{ xs: 700, md: 500 }}
+          fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', sm: "FuturaPT" }}
+          mt={{ md: 35, sm: 25, xs: 20 }}
+          ml={{ xs: 3, md: 12 }}
+          mr={{ xs: 3, md: 12 }}
+        >
+          This application is made about my lovely cat Persik.<br />
+          My contacts: egorova.aleksandra@gmail.com
+        </Typography>
+      </Stack>
+    </Box>
   );
 };
 
