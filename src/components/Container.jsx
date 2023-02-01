@@ -8,24 +8,29 @@ import { Box } from '@mui/system';
 import { Button, CardMedia, Paper, Stack, Typography } from '@mui/material';
 
 const imageUrl = window.innerWidth >= 900 ? desktopImage : mobileImage;
+const attachment = window.innerWidth >= 900 ? "fixed" : "scroll";
 
 const styles = {
   paperContainer: {
-    flexGrow: 4,
+    flexGrow: 1,
     flex: 1,
     padding: 0.1,
     backgroundImage: `url(${imageUrl})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "bottom right",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+    // backgroundAttachment: "scroll",
+    backgroundAttachment: `${attachment}`,
+
+    // width: "100%",
+    // height: "auto",
   },
 };
 
 const Container = () => {
   let navigate = useNavigate();
   return (
-    <Box bgcolor={'#F5F3F1'}>
+    <Box bgcolor={'#F5F3F1'} padding-top={'56.25%'}>
       <Paper style={styles.paperContainer}>
         <Box flex={4}
           mt={{ xs: 1, md: 5 }}
