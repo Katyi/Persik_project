@@ -60,7 +60,7 @@ const Container = () => {
             Его жизнь была короткой и яркой, данный сайт в память о нем.
           </Typography>
           <Stack ml={{md:10,xs: 2}} mt={{md:7, sm: 7, xs: 4}} direction="row" gap={{md:6, xs: 2}}>
-            <Button onClick={() => navigate('/about')}
+            <Button onClick={() => navigate('/Persik_project/about')}
               variant='outlined'
               sx={{
                 color: '#fff', backgroundColor: '#000', borderColor: '#000',
@@ -72,7 +72,7 @@ const Container = () => {
               }}>
               ABOUT
             </Button>
-            <Button onClick={() => navigate('/album')} variant="contained"
+            <Button onClick={() => navigate('/Persik_project/album')} variant="contained"
               sx={{
                 color: '#000', backgroundColor: '#f0f0f0', borderColor: 'transparent',
                 fontFamily: { md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" },

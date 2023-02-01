@@ -43,7 +43,7 @@ const Navbar = () => {
           </Typography>
         </Icons>
 
-        {(pathName === '/about' || pathName === '/album' )
+        {(pathName === '/Persik_project/about' || pathName === '/Persik_project/album' )
           && <Link
             component="button"
             variant="body2"
@@ -54,14 +54,15 @@ const Navbar = () => {
               fontWeight: { md: 400, sm: 400 },
               display: { xs: "none", sm: "block" }
             }}
-            onClick={() => navigate('/container')}
+            onClick={() => navigate('/Persik_project')}
+            // onClick={() => navigate('/Persik_project/container')}
           >
             Back to Main Page
           </Link>
         }
         
         <UserBox position={'fixed'} mt={3} mb={3}>
-          {(pathName === '/about' || pathName === '/album')
+          {(pathName === '/Persik_project/about' || pathName === '/Persik_project/album')
             && <Link
               component="button"
               variant="body2"
@@ -69,7 +70,8 @@ const Navbar = () => {
                 color: '#000',
                 display: { xs: "flex", md: "none" }
               }}
-              onClick={() => navigate('/container')}
+              // onClick={() => navigate('/Persik_project/container')}
+              onClick={() => navigate('/Persik_project')}
             >
               <ArrowBack />
             </Link>

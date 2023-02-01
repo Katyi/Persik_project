@@ -3,7 +3,7 @@ import Container from "../Container"
 import Album from "../Album"
 
 export const routes =[
-  {path: '/about', component: About, exact: true},
-  { path: '/container', component: Container, exact: true },
-  {path: '/album', component: Album, exact: true},
+  {path: '/Persik_project/about', component: About, exact: true},
+  { path: '/Persik_project', component: Container, exact: true },
+  {path: '/Persik_project/album', component: Album, exact: true},
 ]
