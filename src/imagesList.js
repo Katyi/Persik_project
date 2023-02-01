@@ -313,7 +313,9 @@ const imagesList = [
   },
   {
     id: 53,
-    title: 'Persik53'
+    title: 'Persik53',
+    date: "Mart 28, 2014",
+    text: "Persik and Easter cake"
   },
   {
     id: 54,

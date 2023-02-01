@@ -18,10 +18,10 @@ const styles = {
     backgroundImage: `url(${imageUrl})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "bottom right",
-    backgroundSize: "cover",
-    // backgroundAttachment: "scroll",
     backgroundAttachment: `${attachment}`,
-
+    backgroundSize: "cover",
+    mozBackgroundSize: "cover", 
+    webkitBackgroundSize: "cover",
     // width: "100%",
     // height: "auto",
   },
