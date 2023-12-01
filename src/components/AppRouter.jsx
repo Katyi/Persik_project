@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from "react-router-dom";
-import Container from './Container';
+import Main from './Main';
 import { routes } from './router/routes'
 
 export default function AppRouter() {
@@ -14,7 +14,7 @@ export default function AppRouter() {
           key={route.path}
         />
       )}
-      <Route path="/*" element={<Container />}/>
+      <Route path="/*" element={<Main />}/>
     </Routes>
   )
 }

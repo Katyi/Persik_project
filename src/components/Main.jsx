@@ -10,7 +10,7 @@ import { Button, CardMedia, Link, Paper, Stack, Typography } from '@mui/material
 
 const imageUrl = window.innerWidth >= 900 ? desktopImage : mobileImage;
 const attachment = window.innerWidth >= 900 ? "fixed" : "scroll";
-const pageDown = window.innerWidth >= 900 ? "#pageDown" : "#mobilePageDown";
+const pageDown = window.innerWidth >= 900 ? "#down" : "#bottom";
 
 const styles = {
   paperContainer: {
@@ -26,7 +26,7 @@ const styles = {
   },
 };
 
-const Container = () => {
+const Main = () => {
   let navigate = useNavigate();
   return (
     <Box bgcolor={'#F5F3F1'}>
@@ -130,7 +130,8 @@ const Container = () => {
             width="100%"
             height="100%"
             viewBox="0 0 1199 425"
-            fill="none">
+            fill="none"  
+          >
             <path
               d="M1198.7 0.58252C587.548 187.543 145.103 153.004 0.275391 112.365V424.825H1198.7V153.764V0.58252Z"
               fill="#F5F3F1"
@@ -296,7 +297,7 @@ const Container = () => {
             Персик был нашим сладким ребенком. Создавал уют дома. Встречал всегда дома. Будил рано утром.
             Приносил радость и счастье своим существованием. Мы всегда будем помнить и любить тебя, солнышко.
             Пусть земля будет тебе пухом, наш милый милый котик!
-            <p id="pageDown"></p>
+            <p id="down"></p>
           </Typography>
           <Box
             mt={5}
@@ -330,7 +331,7 @@ const Container = () => {
               </Typography>
             </Link>
             <CardMedia
-              id="mobilePageDown"
+              id="bottom"
               component="img"
               height="90%"
               src="https://static.tildacdn.com/tild3765-3135-4565-b861-383831366635/Layer_2_2.svg"
@@ -343,4 +344,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default Main;

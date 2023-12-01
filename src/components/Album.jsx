@@ -7,12 +7,14 @@ const Album = () => {
   return (
     <Box bgcolor={'#F5F3F1'} direction={'row'}>
       <Stack width='100%'
-        alignItems={'center'} justifyContent={'center'}>
+        alignItems={'center'} justifyContent={'center'}
+        mt={10}
+      >
       {imagesList.map((item) =>
         <Card key={item.id} sx={{margin:2}} >
           <CardHeader subheader={item.date}/>
           <CardMedia
-            flex={1}
+            // flex={1}
             component="img"
             width={600}
             height={600}

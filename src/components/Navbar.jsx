@@ -54,7 +54,8 @@ const Navbar = () => {
               fontFamily: { md: 'Comic Sans MS,Comic Sans,fantasy', sm: "FuturaPT" },
               fontSize: { md: 25, sm: 25 },
               fontWeight: { md: 400, sm: 400 },
-              display: { xs: "none", sm: "block" }
+              display: { xs: "none", sm: "block" },
+              textDecoration: "none",
             }}
             onClick={() => navigate('/Persik_project')}
           >

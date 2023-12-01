@@ -1,8 +1,15 @@
-import { Stack, Typography } from '@mui/material';
+import { Link, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  let navigate = useNavigate();
+  const location = useLocation();
+  // const pathName1 = location.pathname;
+  const pathName = location.pathname.split("/")[2];
+  console.log(pathName)
+
   return (
     <Box bgcolor='#F5F3F1'>
       <svg
@@ -18,17 +25,63 @@ const Footer = () => {
       </svg>
       <Stack direction={{ md: 'row', xs: "column" }}
         bgcolor={'#faf8f6'}
-        height={200} mt={-1}
+        height={200} 
+        mt={-1}
         pl={{ md: 10, xs: 2 }}
+        pr={{ md: 10, xs: 2 }}
         alignItems={"center"}
+        justifyContent={"space-between"}
         gap={{ md: 10, xs: 1 }}
         fontSize={14}
         fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
         fontWeight={500}
       >
         <Typography fontWeight={300} >Copyright © 2022, Persik ­­­­­­Cat. All rights reserved.</Typography>
-        <Typography >About Site</Typography>
-        <Typography >Photos</Typography>
+        {(pathName === 'about' || pathName === 'album' ) &&
+        <Link 
+          color="primary"
+          component="button"
+            variant="body2"
+            sx={{
+              color: '#000',
+              fontSize: 20,
+              textDecoration: "none",
+            }}
+            onClick={() => navigate('/Persik_project')}
+        >
+          Home
+        </Link>
+        }
+        {pathName !== 'about' &&
+        <Link 
+          color="primary"
+          component="button"
+            variant="body2"
+            sx={{
+              color: '#000',
+              fontSize: 20,
+              textDecoration: "none",
+            }}
+            onClick={() => navigate('/Persik_project/about')}
+        >
+          About
+        </Link>
+        }
+        {pathName !== 'album' &&
+        <Link 
+          color="primary"
+          component="button"
+            variant="body2"
+            sx={{
+              color: '#000',
+              fontSize: 20,
+              textDecoration: "none",
+            }}
+            onClick={() => navigate('/Persik_project/album')}
+        >
+          Photos
+        </Link>
+        }
         <Typography
           fontSize={33}
           fontWeight={400}
