@@ -6,12 +6,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Footer = () => {
   let navigate = useNavigate();
   const location = useLocation();
-  // const pathName1 = location.pathname;
   const pathName = location.pathname.split("/")[2];
-  console.log(pathName)
-
   return (
-    <Box bgcolor='#F5F3F1'>
+    <Box 
+      bgcolor='#F5F3F1'
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
@@ -29,6 +28,7 @@ const Footer = () => {
         mt={-1}
         pl={{ md: 10, xs: 2 }}
         pr={{ md: 10, xs: 2 }}
+        pb={5}
         alignItems={"center"}
         justifyContent={"space-between"}
         gap={{ md: 10, xs: 1 }}

@@ -8,7 +8,7 @@ const Album = () => {
     <Box bgcolor={'#F5F3F1'} direction={'row'}>
       <Stack width='100%'
         alignItems={'center'} justifyContent={'center'}
-        mt={10}
+        pt={3}
       >
       {imagesList.map((item) =>
         <Card key={item.id} sx={{margin:2}} >
