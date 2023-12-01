@@ -1,18 +1,19 @@
 import React from 'react'
 import desktopImage from '../images/Pers2.jpg';
 import mobileImage from '../images/Pers01.jpg';
-import Myimage1 from '../images/Persik11.jpg'
-import Myimage2 from '../images/Pers4.jpg'
+import Myimage1 from '../images/Pers5.jpeg';
+import Myimage2 from '../images/Persik87.jpg';
+import Myimage3 from '../images/Pers6.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { Box } from '@mui/system';
-import { Button, CardMedia, Paper, Stack, Typography } from '@mui/material';
+import { Button, CardMedia, Link, Paper, Stack, Typography } from '@mui/material';
 
 const imageUrl = window.innerWidth >= 900 ? desktopImage : mobileImage;
 const attachment = window.innerWidth >= 900 ? "fixed" : "scroll";
+const pageDown = window.innerWidth >= 900 ? "#pageDown" : "#mobilePageDown";
 
 const styles = {
   paperContainer: {
-    flexGrow: 1,
     flex: 1,
     padding: 0.1,
     backgroundImage: `url(${imageUrl})`,
@@ -20,22 +21,25 @@ const styles = {
     backgroundPosition: "bottom right",
     backgroundAttachment: `${attachment}`,
     backgroundSize: "cover",
-    mozBackgroundSize: "cover", 
-    webkitBackgroundSize: "cover",
-    // width: "100%",
-    // height: "auto",
+    MozBackgroundSize: "cover", 
+    WebkitBackgroundSize: "cover",
   },
 };
 
 const Container = () => {
   let navigate = useNavigate();
   return (
-    <Box bgcolor={'#F5F3F1'} padding-top={'56.25%'}>
-      <Paper style={styles.paperContainer}>
-        <Box flex={4}
-          mt={{ xs: 1, md: 5 }}
-          ml={{ xs: 2, md: 12 }}
-          mr={{ xs: 2, md: 12 }}
+    <Box bgcolor={'#F5F3F1'}>
+      {/* FIRS PART OF PAGE */}
+      <Paper 
+      style={styles.paperContainer}
+      >
+        <Box 
+          display="flex" flexDirection="column" justifyContent="space-between"
+          height={'66vh'}
+          pt={{ xs: 1, md: 5 }}
+          pl={{ xs: 2, md: 12 }}
+          pr={{ xs: 2, md: 12 }}
         >
           <Typography
             color={{xs: "white", md: "black"}}
@@ -45,21 +49,27 @@ const Container = () => {
           >
             Персик - серебристый пушистый кот
           </Typography>
+          
           <Typography
             color={{xs: "white", md: "black"}}
             fontSize={{xs: 20, sm: 25, md: 30}}
             fontWeight={{ xs: 700, md: 900 }}
             fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
             width={{ md: 700, sm: 500 }}
-            mt={{ md: 5, sm: 5, xs: 2 }}
+            style={{wordWrap: "break-all"}}
           >
-            Персик - серебристый пушистый кот, мальчик. Он родился 1 апреля 2008
+            Персик - серебристый пушистый кот.<br/>  
+            Он родился 1 апреля 2008
             года в России. «Персик» потому-что он персидских корней. Сам же Персик
             считал себя аристократом - потомком Плантагенетов, Бурбонов и Рюриковичей.
             Персик ушел из жизни 5 августа 2022 года. My sweet boy is gone, RIP.
-            Его жизнь была короткой и яркой, данный сайт в память о нем.
+            Этот сайт в память о нем.
           </Typography>
-          <Stack ml={{md:10,xs: 2}} mt={{md:7, sm: 7, xs: 4}} direction="row" gap={{md:6, xs: 2}}>
+          {/* BUTTONS */}
+          <Stack ml={{md:10,xs: 2}}
+            direction="row" 
+            gap={{md:6, xs: 2}}
+          >
             <Button onClick={() => navigate('/Persik_project/about')}
               variant='outlined'
               sx={{
@@ -83,9 +93,38 @@ const Container = () => {
               }}>
               PHOTOS
             </Button>
+            {/* SCROLL DOWN */}
+            <Link 
+              href={pageDown}
+              style={{
+                position:"absolute",
+                right: '3vw',
+                top: '60vh',
+                textDecoration: "none",
+                fontSize: 16,
+                fontWeight: 700,
+                width:"5vh",
+                display:"flex",
+                flexDirection:"column",
+                alignItems:"center",
+              }}
+            >
+              <Typography 
+                style={{
+                  width:"150px", 
+                  height:"3vh", 
+                  transform: 'rotate(90deg)', 
+                  fontSize:20, 
+                  fontWeight:900,
+                  color: "white"
+                }}
+              >
+                SCROLL DOWN
+              </Typography>
+            </Link>
           </Stack>
         </Box>
-        <Box m={-1}>
+        <Box mb={-2}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -99,19 +138,21 @@ const Container = () => {
           </svg>
         </Box>
       </Paper>
-      <Stack direction={"row"} gap={10} ml={{ md: 10, xs: 2 }} mr={{md: 10, xs: 1}} mt={{lg:-30, md:-15, xs: 0}}>
+      {/* SECOND PART OF PAGE */}
+      <Stack 
+        direction={"row"} 
+        gap={10}
+        pl={{md: 10, xs: 0}} 
+        pr={{md: 15, xs: 0}} 
+        mt={{lg:-30, md:-15, xs: 0}}
+      >
+        {/* COLUMN 1 */}
         <Stack
           direction={"column"}
-          mt={16}
-          mb={3}
           width={'50%'}
-          flex={1}
-          flexGrow={1}
           display={{ xs: "none", md: "flex" }}
         >
-          <Box
-            height={500}
-            pr={0}>
+          <Box>
             <CardMedia
               component="img"
               height="100%"
@@ -119,40 +160,71 @@ const Container = () => {
               alt="Persik's photo 1"
             />
           </Box>
-          <Box mt={10}
-            width={300}
+          <Box mt={5}
             pl={0}>
             <CardMedia
               component="img"
               height="100%"
-              src="https://static.tildacdn.com/tild6232-3335-4532-b630-316437633033/Layer_1.svg"
+              src={Myimage2}
+              // src="https://static.tildacdn.com/tild6232-3335-4532-b630-316437633033/Layer_1.svg"
               alt="Cat's Pic 1"
             />
           </Box>
-          <Box mt={10}>
+          <Box mt={5}>
             <CardMedia
               component="img"
               height="100%"
-              src={Myimage2}
+              src={Myimage3}
               alt="Persik's photo 1"
             />
           </Box>
-          <Box mt={10}
-            pl={10}>
+          <Box 
+            mt={5}
+            display='flex'
+            alignItems={'center'}
+            >
+              {/* SCROLL UP */}
+              <Link 
+                href="#top"
+                style={{
+                  textDecoration: "none",
+                  fontSize: 16,
+                  fontWeight: 700,
+                  width:"10%",
+                  display:"flex",
+                  flexDirection:"column",
+                  alignItems:"center"
+                }}
+              >
+                <Typography 
+                  style={{
+                    width:"110px", 
+                    height:"10%", 
+                    transform: 'rotate(270deg)', 
+                    fontSize:20, 
+                    fontWeight:700, 
+                    color: "#ff8562"
+                  }}
+                >
+                  SCROLL UP
+                </Typography>
+              </Link>
             <CardMedia
               component="img"
-              height="100%"
+              // width="80%"
+              height="90%"
               src="https://static.tildacdn.com/tild3765-3135-4565-b861-383831366635/Layer_2_2.svg"
               alt="Cat's Pic 2"
             />
           </Box>
         </Stack>
-        <Stack direction={'column'}
-          width={'50%'}
-          gap={7}
-          mb={2}
-          mr={{ md: 10, xs: 2 }}
-          flex={1} >
+        {/* COLUMN 2 */}
+        <Stack
+          direction={'column'}
+          width={{xs:'90%', md:'50%'}}
+          gap={5}
+          pl={{xs:'5%', md:'0%'}}
+        >
           <Typography
             fontSize={{ md: 40, sm: 40, xs: 23 }}
             fontWeight={{md: 900, sm: 800, xs: 700}}
@@ -161,11 +233,11 @@ const Container = () => {
           >
             История Персика
           </Typography>
-          <Box width={"40%"} alignItems={'center'} justifyContent={'center'} >
+          <Box width={"100%"} alignItems={'center'} justifyContent={'center'} >
             <CardMedia
               component="img"
-              // height={"20%"}
-              src="https://static.tildacdn.com/tild6232-3335-4532-b630-316437633033/Layer_1.svg"
+              src={Myimage3}
+              // src="https://static.tildacdn.com/tild6232-3335-4532-b630-316437633033/Layer_1.svg"
               alt="Cat's Pic 1"
               sx={{display:{xs:"block", md: "none"}}}
             />
@@ -184,6 +256,7 @@ const Container = () => {
             ехал с нами домой. Он был такой милый и очаровательный, что все наши родственнники
             и друзья полюбили его.
             <br />
+            <br />
             У Персика была очень густая шерсть. В детстве он был более серый и в полоску.
             Когда он был крохотный непонятно было, что он настолько пушистым вырастет.
             В возрасте года уже стало понятно, что он меховой моторчик.
@@ -195,6 +268,7 @@ const Container = () => {
             А то, что он потом будет царапать мягкую мебель (диваны и кресла) не подумали.
             Так, что так и прожили с Персиком с недорогой мягкой мебелю )))))
             <br />
+            <br />
             В начале мы Персика кормили мясом. А корм или консерву он ел только иногда как
             вкусняшки. Так он прожил 6 лет. Затем при переезде в штаты пришлось его перевести на кошачьи
             премиальные корма, так как мясо там было бы очень дорого. И при возвращении домой не
@@ -205,41 +279,66 @@ const Container = () => {
             Молоко Персик не любил. Мог чуть-чуть поесть только йогурт. Чуть-чуть мог поесть оливки.
             Овощи, фрукты, каши, хлеб и т.д. он вообще не ел ))))
             <br />
+            <br />
             Спать Персик любил отдельно. На своем месте. У него был матрас из Икеи. До этого
             он спал на пледе тоже Икеевском. Также любил спать на нашей кровати или диване днем.
             Но с людьми спать он не любил особо. Людей он не боялся. Немного боялся детей, если
             его сильно хватали. Ну а так он очень спокойный был по отношению к людям и другим животным.
             Не сломал, не уронил, не порвал, разгрыз ничего за свою жизнь (кроме кресел и диванов)))))
             <br />
+            <br />
             Персик успел пожить и побывать в Балашихе, Москве, Нью-Джерси, Мытищах, Владимирской обл.
             Но он не очень любил ездить в машине долго. После перелета через Антлантику у него
             был стресс какое-то время. Также он не очень любил оставаться один дома. Иногда ему приходилось
             оставаться на 2-3 дня одному. Он очень возмущался долго потом ))))
             <br />
+            <br />
             Персик был нашим сладким ребенком. Создавал уют дома. Встречал всегда дома. Будил рано утром.
             Приносил радость и счастье своим существованием. Мы всегда будем помнить и любить тебя, солнышко.
             Пусть земля будет тебе пухом, наш милый милый котик!
+            <p id="pageDown"></p>
           </Typography>
-          <CardMedia
-            component="img"
-            height="100%"
-            src="https://static.tildacdn.com/tild3765-3135-4565-b861-383831366635/Layer_2_2.svg"
-            alt="Cat's Pic 2"
-            sx={{display:{xs:"block", md:"none"}}}
-          />
+          <Box
+            mt={5}
+            alignItems={'center'}
+            sx={{display:{xs:"flex", md:"none"}}}
+          >
+            {/* SCROLL UP */}
+            <Link 
+              href="#top"
+              style={{
+                textDecoration: "none",
+                fontSize: 16,
+                fontWeight: 700,
+                width:"10%",
+                display:"flex",
+                flexDirection:"column",
+                alignItems:"center"
+              }}
+            >
+              <Typography 
+                style={{
+                  width:"110px", 
+                  height:"10%", 
+                  transform: 'rotate(270deg)', 
+                  fontSize:20, 
+                  fontWeight:700, 
+                  color: "#ff8562"
+                }}
+              >
+                SCROLL UP
+              </Typography>
+            </Link>
+            <CardMedia
+              id="mobilePageDown"
+              component="img"
+              height="90%"
+              src="https://static.tildacdn.com/tild3765-3135-4565-b861-383831366635/Layer_2_2.svg"
+              alt="Cat's Pic 2"
+            />
+          </Box>
         </Stack>
       </Stack>
-      <Box mt={5} ml={{xs: 10, md:30}}>
-          <a href="#top" style={{
-            color: "#ff8562",
-            textDecoration: "none",
-            fontSize: 20,
-            fontWeight: 700,
-            }}
-          >
-            SCROLL UP
-          </a>
-        </Box>
     </Box>
   );
 };

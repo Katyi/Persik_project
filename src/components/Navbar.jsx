@@ -3,13 +3,14 @@ import { ArrowBack, Pets } from '@mui/icons-material';
 import { AppBar, Avatar, Link, Toolbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Myimage from '../images/Pers.jpg'
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
-  padding: '3',
+  alignItems: "center",
+  height: '10vh'
 });
 
 const Icons = styled(Box)(() => ({
@@ -26,24 +27,25 @@ const UserBox = styled(Box)(() => ({
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const pathName = window.location.pathname;
+  const location = useLocation();
+  const pathName = location.pathname.split("/")[2];
   return (
     <AppBar position='sticky'>
+      {/* in screens bigger */}
       <StyledToolbar>
         <Icons>
-          <Avatar sx={{ width: 100, height: 100, mt: 2, mb: 2, display: { xs: "none", sm: "block" } }} src={Myimage} />
+          <Avatar sx={{ width: 60, height: 60, display: { xs: "none", sm: "block" } }} src={Myimage} />
           <Typography
-            variant='h3'
+            variant='h4'
             fontFamily='Comic Sans MS,Comic Sans,fantasy'
             fontWeight={900}
-            p={3}
             sx={{ display: { xs: "none", sm: "block" } }}
           >
             My Cat Persik
           </Typography>
         </Icons>
-
-        {(pathName === '/Persik_project/about' || pathName === '/Persik_project/album' )
+        {/* only in aboit and album pages */}
+        {(pathName === 'about' || pathName === 'album' )
           && <Link
             component="button"
             variant="body2"
@@ -55,22 +57,21 @@ const Navbar = () => {
               display: { xs: "none", sm: "block" }
             }}
             onClick={() => navigate('/Persik_project')}
-            // onClick={() => navigate('/Persik_project/container')}
           >
             Back to Main Page
           </Link>
         }
-        
+        {/* in smaller screens */}
+        {/* only in aboit and album pages */}
         <UserBox position={'fixed'} mt={3} mb={3}>
-          {(pathName === '/Persik_project/about' || pathName === '/Persik_project/album')
+          {(pathName === 'about' || pathName === 'album')
             && <Link
               component="button"
               variant="body2"
               sx={{
                 color: '#000',
-                display: { xs: "flex", md: "none" }
+                display: { xs: "flex", sm: "none" }
               }}
-              // onClick={() => navigate('/Persik_project/container')}
               onClick={() => navigate('/Persik_project')}
             >
               <ArrowBack />
