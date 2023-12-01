@@ -99,12 +99,12 @@ const Main = () => {
               style={{
                 position:"absolute",
                 right: '3vw',
-                top: '60vh',
+                top: '95vh',
                 textDecoration: "none",
                 fontSize: 16,
-                fontWeight: 700,
+                fontWeight: 500,
                 width:"5vh",
-                display:"flex",
+                display: "flex",
                 flexDirection:"column",
                 alignItems:"center",
               }}
@@ -114,9 +114,10 @@ const Main = () => {
                   width:"150px", 
                   height:"3vh", 
                   transform: 'rotate(90deg)', 
-                  fontSize:20, 
+                  fontSize:16, 
                   fontWeight:900,
-                  color: "white"
+                  // color: "white"
+                  color: "#ff8562"
                 }}
               >
                 SCROLL DOWN
@@ -202,7 +203,7 @@ const Main = () => {
                     width:"110px", 
                     height:"10%", 
                     transform: 'rotate(270deg)', 
-                    fontSize:20, 
+                    fontSize:16, 
                     fontWeight:700, 
                     color: "#ff8562"
                   }}
@@ -322,7 +323,7 @@ const Main = () => {
                   width:"110px", 
                   height:"10%", 
                   transform: 'rotate(270deg)', 
-                  fontSize:20, 
+                  fontSize:16, 
                   fontWeight:700, 
                   color: "#ff8562"
                 }}
