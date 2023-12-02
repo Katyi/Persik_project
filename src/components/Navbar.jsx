@@ -86,7 +86,7 @@ const Navbar = () => {
           <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         </UserBox>
         <Typography
-            width={'47%'}
+            // width={'47%'}
             textAlign='right'
             variant='span'
             fontSize={30}
