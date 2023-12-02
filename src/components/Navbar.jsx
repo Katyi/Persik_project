@@ -78,7 +78,7 @@ const Navbar = () => {
               <ArrowBack />
             </Link>
           }
-          <Pets sx={{ display: { xs: "flex", sm: "none" } }} />
+          <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         </UserBox>
         <Typography
             variant='span'
