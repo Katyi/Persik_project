@@ -7,10 +7,14 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Myimage from '../images/Pers.jpg'
 
 const StyledToolbar = styled(Toolbar)({
+  width: '100vw',
   display: "flex",
+  flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
-  height: '10vh'
+  height: '10vh',
+  padding: 0,
+  margin:0,
 });
 
 const Icons = styled(Box)(() => ({
@@ -20,9 +24,10 @@ const Icons = styled(Box)(() => ({
 }));
 
 const UserBox = styled(Box)(() => ({
+  width:"40%",
   display: "flex",
   alignItems: "center",
-  gap: "10px",
+  gap: "5px",
 }));
 
 const Navbar = () => {
@@ -33,7 +38,7 @@ const Navbar = () => {
     <AppBar position='sticky'>
       {/* in screens bigger */}
       <StyledToolbar>
-        <Icons>
+        <Icons xs={{display: { xs: "none", sm: "block" }}}>
           <Avatar sx={{ width: 60, height: 60, display: { xs: "none", sm: "block" } }} src={Myimage} />
           <Typography
             variant='h4'
@@ -64,7 +69,7 @@ const Navbar = () => {
         }
         {/* in smaller screens */}
         {/* only in aboit and album pages */}
-        <UserBox>
+        <UserBox mt={3} mb={3}>
           {(pathName === 'about' || pathName === 'album')
             && <Link
               component="button"
@@ -81,12 +86,14 @@ const Navbar = () => {
           <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         </UserBox>
         <Typography
+            width={'47%'}
+            textAlign='right'
             variant='span'
             fontSize={30}
             fontWeight={900}
             fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
             sx={{ display: { xs: "block", sm: "none" } }}
-            pl={0}
+            pr={"3%"}
           >
             My Cat Persik
           </Typography>
