@@ -71,7 +71,7 @@ const Navbar = () => {
               variant="body2"
               sx={{
                 color: '#000',
-                display: { xs: "flex", sm: "none" }
+                display: { xs: "block", sm: "none" }
               }}
               onClick={() => navigate('/Persik_project')}
             >

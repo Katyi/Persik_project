@@ -10,7 +10,6 @@ import { Button, CardMedia, Link, Paper, Stack, Typography } from '@mui/material
 
 const imageUrl = window.innerWidth >= 900 ? desktopImage : mobileImage;
 const attachment = window.innerWidth >= 900 ? "fixed" : "scroll";
-const pageDown = window.innerWidth >= 900 ? "#down" : "#bottom";
 
 const styles = {
   paperContainer: {
@@ -94,8 +93,8 @@ const Main = () => {
               PHOTOS
             </Button>
             {/* SCROLL DOWN */}
-            <Link 
-              href={pageDown}
+            <Link
+              href='#bottom'
               style={{
                 position:"absolute",
                 right: '3vw',
@@ -298,7 +297,6 @@ const Main = () => {
             Персик был нашим сладким ребенком. Создавал уют дома. Встречал всегда дома. Будил рано утром.
             Приносил радость и счастье своим существованием. Мы всегда будем помнить и любить тебя, солнышко.
             Пусть земля будет тебе пухом, наш милый милый котик!
-            <p id="down"></p>
           </Typography>
           <Box
             mt={5}
@@ -332,7 +330,6 @@ const Main = () => {
               </Typography>
             </Link>
             <CardMedia
-              id="bottom"
               component="img"
               height="90%"
               src="https://static.tildacdn.com/tild3765-3135-4565-b861-383831366635/Layer_2_2.svg"
@@ -341,6 +338,7 @@ const Main = () => {
           </Box>
         </Stack>
       </Stack>
+      <Typography id="bottom"></Typography>
     </Box>
   );
 };
