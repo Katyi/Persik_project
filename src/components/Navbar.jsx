@@ -64,7 +64,7 @@ const Navbar = () => {
         }
         {/* in smaller screens */}
         {/* only in aboit and album pages */}
-        <UserBox position={'fixed'} mt={3} mb={3}>
+        <UserBox>
           {(pathName === 'about' || pathName === 'album')
             && <Link
               component="button"
