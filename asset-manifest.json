@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/Persik_project/static/js/main.d38b0aa0.js",
+    "main.js": "/Persik_project/static/js/main.faa2ad57.js",
     "static/media/Pers6.jpeg": "/Persik_project/static/media/Pers6.b5f42b4bed182607a901.jpeg",
     "static/media/Pers5.jpeg": "/Persik_project/static/media/Pers5.e6f9d2319a48f704d77f.jpeg",
     "static/media/Persik12.jpg": "/Persik_project/static/media/Persik12.c54021c683d09393ef84.jpg",
@@ -110,9 +110,9 @@
     "static/media/Persik75.jpg": "/Persik_project/static/media/Persik75.fac0b589021fba8f6aa3.jpg",
     "static/media/Pers01.jpg": "/Persik_project/static/media/Pers01.10efb6e5135a2fdff4ca.jpg",
     "index.html": "/Persik_project/index.html",
-    "main.d38b0aa0.js.map": "/Persik_project/static/js/main.d38b0aa0.js.map"
+    "main.faa2ad57.js.map": "/Persik_project/static/js/main.faa2ad57.js.map"
   },
   "entrypoints": [
-    "static/js/main.d38b0aa0.js"
+    "static/js/main.faa2ad57.js"
   ]
 }
