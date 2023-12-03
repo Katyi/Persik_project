@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import desktopImage from '../images/Pers2.jpg';
 import mobileImage from '../images/Pers01.jpg';
 import Myimage1 from '../images/Pers5.jpeg';
@@ -6,7 +6,8 @@ import Myimage2 from '../images/Persik87.jpg';
 import Myimage3 from '../images/Pers6.jpeg';
 import { useNavigate } from 'react-router-dom';
 import { Box } from '@mui/system';
-import { Button, CardMedia, Link, Paper, Stack, Typography } from '@mui/material';
+import { Button, CardMedia, Paper, Stack, Typography } from '@mui/material';
+
 
 const imageUrl = window.innerWidth >= 900 ? desktopImage : mobileImage;
 const attachment = window.innerWidth >= 900 ? "fixed" : "scroll";
@@ -27,13 +28,26 @@ const styles = {
 
 const Main = () => {
   let navigate = useNavigate();
+  const bottom = useRef(null);
+  const top1 = useRef(null);
+  const top2 = useRef(null);
+
+  const scrollDownOrTop = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <Box bgcolor={'#F5F3F1'}>
+    <Box bgcolor={'#F5F3F1'} >
+      <Typography ref={top1} style={{position:'absolute', top: 0}}></Typography>
+      <Typography ref={top2} style={{position:'absolute', top: 0}}></Typography>
       {/* FIRS PART OF PAGE */}
       <Paper 
       style={styles.paperContainer}
       >
-        <Box 
+        <Box    
           display="flex" flexDirection="column" justifyContent="space-between"
           height={'66vh'}
           pt={{ xs: 1, md: 5 }}
@@ -92,39 +106,9 @@ const Main = () => {
               }}>
               PHOTOS
             </Button>
-            {/* SCROLL DOWN */}
-            <Link
-              href='#bottom'
-              style={{
-                position:"absolute",
-                right: '3vw',
-                top: '95vh',
-                textDecoration: "none",
-                fontSize: 16,
-                fontWeight: 500,
-                width:"5vh",
-                display: "flex",
-                flexDirection:"column",
-                alignItems:"center",
-              }}
-            >
-              <Typography 
-                style={{
-                  width:"150px", 
-                  height:"3vh", 
-                  transform: 'rotate(90deg)', 
-                  fontSize:16, 
-                  fontWeight:900,
-                  // color: "white"
-                  color: "#ff8562"
-                }}
-              >
-                SCROLL DOWN
-              </Typography>
-            </Link>
           </Stack>
         </Box>
-        <Box mb={-2}>
+        <Box mb={-1}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -137,6 +121,22 @@ const Main = () => {
               fill="#F5F3F1"
             />
           </svg>
+          {/* SCROLL DOWN */}
+          <Typography
+            sx={{
+              position: "absolute",
+              right: {xs:"10%", md: "3%"},
+              transform: {xs: 'translateY(-15vh) rotate(90deg)', md: 'translateY(-40vh) rotate(90deg)'},
+              height: "140px",
+              fontSize: {xs: 12, md: 16}, 
+              fontWeight: 700,
+              color: "#ff8562",
+              cursor: "pointer"
+            }}
+            onClick={() => scrollDownOrTop(bottom)}
+          >
+            SCROLL DOWN
+          </Typography>
         </Box>
       </Paper>
       {/* SECOND PART OF PAGE */}
@@ -183,37 +183,26 @@ const Main = () => {
             mt={5}
             display='flex'
             alignItems={'center'}
+            justifyContent={'space-between'}
+          >
+            {/* SCROLL UP */}
+            <Typography
+              sx={{
+                width: "100%",
+                height:"35%",
+                fontSize: 16, 
+                fontWeight: 700,
+                color: "#ff8562",
+                transform: 'rotate(270deg)',
+                cursor: "pointer",
+              }}
+              onClick={() => scrollDownOrTop(top1)}
             >
-              {/* SCROLL UP */}
-              <Link 
-                href="#top"
-                style={{
-                  textDecoration: "none",
-                  fontSize: 16,
-                  fontWeight: 700,
-                  width:"10%",
-                  display:"flex",
-                  flexDirection:"column",
-                  alignItems:"center"
-                }}
-              >
-                <Typography 
-                  style={{
-                    width:"110px", 
-                    height:"10%", 
-                    transform: 'rotate(270deg)', 
-                    fontSize:16, 
-                    fontWeight:700, 
-                    color: "#ff8562"
-                  }}
-                >
-                  SCROLL UP
-                </Typography>
-              </Link>
+              SCROLL UP
+            </Typography>
             <CardMedia
               component="img"
-              // width="80%"
-              height="90%"
+              height="80%"
               src="https://static.tildacdn.com/tild3765-3135-4565-b861-383831366635/Layer_2_2.svg"
               alt="Cat's Pic 2"
             />
@@ -304,41 +293,30 @@ const Main = () => {
             sx={{display:{xs:"flex", md:"none"}}}
           >
             {/* SCROLL UP */}
-            <Link 
-              href="#top"
-              style={{
-                textDecoration: "none",
-                fontSize: 16,
+            <Typography 
+              sx={{
+                width: "100%",
+                height:"35%",
+                fontSize: 12, 
                 fontWeight: 700,
-                width:"10%",
-                display:"flex",
-                flexDirection:"column",
-                alignItems:"center"
+                color: "#ff8562",
+                transform: 'rotate(270deg)',
+                cursor: "pointer",
               }}
+              onClick={() => scrollDownOrTop(top2)}
             >
-              <Typography 
-                style={{
-                  width:"110px", 
-                  height:"10%", 
-                  transform: 'rotate(270deg)', 
-                  fontSize:16, 
-                  fontWeight:700, 
-                  color: "#ff8562"
-                }}
-              >
-                SCROLL UP
-              </Typography>
-            </Link>
+              SCROLL UP
+            </Typography>
             <CardMedia
               component="img"
-              height="90%"
+              height="80%"
               src="https://static.tildacdn.com/tild3765-3135-4565-b861-383831366635/Layer_2_2.svg"
               alt="Cat's Pic 2"
             />
           </Box>
         </Stack>
       </Stack>
-      <Typography id="bottom"></Typography>
+      <Typography ref={bottom}></Typography>
     </Box>
   );
 };
