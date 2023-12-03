@@ -4,17 +4,14 @@ import { AppBar, Avatar, Link, Toolbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Myimage from '../images/Pers.jpg'
+import Myimage from '../images/Pers.jpg';
 
 const StyledToolbar = styled(Toolbar)({
-  width: '100vw',
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
   height: '10vh',
-  padding: 0,
-  margin:0,
 });
 
 const Icons = styled(Box)(() => ({
@@ -24,10 +21,9 @@ const Icons = styled(Box)(() => ({
 }));
 
 const UserBox = styled(Box)(() => ({
-  width:"40%",
   display: "flex",
   alignItems: "center",
-  gap: "5px",
+  gap: "10px",
 }));
 
 const Navbar = () => {
@@ -69,10 +65,11 @@ const Navbar = () => {
         }
         {/* in smaller screens */}
         {/* only in aboit and album pages */}
-        <UserBox mt={3} mb={3}>
-          {(pathName === 'about' || pathName === 'album')
-            && <Link
+        <UserBox sx={{ display: { xs: "flex", sm: "none" } }}>
+          {(pathName === 'about' || pathName === 'album') &&
+            <Link
               component="button"
+              edge="start"
               variant="body2"
               sx={{
                 color: '#000',
@@ -80,20 +77,20 @@ const Navbar = () => {
               }}
               onClick={() => navigate('/Persik_project')}
             >
-              <ArrowBack />
+              <ArrowBack/>
             </Link>
           }
           <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         </UserBox>
         <Typography
-            // width={'47%'}
+            width={'75%'}
             textAlign='right'
             variant='span'
             fontSize={30}
             fontWeight={900}
             fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
             sx={{ display: { xs: "block", sm: "none" } }}
-            pr={"3%"}
+            pr={"5%"}
           >
             My Cat Persik
           </Typography>
