@@ -500,7 +500,7 @@ const imagesList = [
   {
     id: 99,
     title: 'Persik99'
-  },
+  }
 ]
 
 export default imagesList;

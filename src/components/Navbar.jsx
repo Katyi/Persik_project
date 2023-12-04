@@ -12,6 +12,8 @@ const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between",
   alignItems: "center",
   height: '10vh',
+  paddingTop: '10px',
+  paddingBottom: '10px'
 });
 
 const Icons = styled(Box)(() => ({
