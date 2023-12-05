@@ -78,15 +78,22 @@ const Album = () => {
             src={require("../images/" + item.title+ '.jpg')}
             alt="Images"
           />
-          <CardContent>
+          <CardContent
+            sx={{
+              height: "20px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between"
+            }}
+          >
             <Typography variant="body2" color="text.secondary">
               {item.text}
             </Typography>
-          </CardContent>
-          {/* <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
               <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite sx={{ color: "red" }} />} />
             </IconButton>
+          </CardContent>
+          {/* <CardActions disableSpacing>
             <IconButton aria-label="share">
               <Share />
             </IconButton>
