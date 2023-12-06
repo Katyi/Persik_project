@@ -8,11 +8,11 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop>
+      {/* <ScrollToTop> */}
         <Navbar />
         <AppRouter />
         <Footer/>
-      </ScrollToTop>
+      {/* </ScrollToTop> */}
     </BrowserRouter>
   );
 }

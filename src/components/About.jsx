@@ -19,7 +19,8 @@ const About = () => {
         <Typography
           fontSize={{xs: 20, sm: 35, md: 40}}
           fontWeight={{ xs: 700, md: 500 }}
-          fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', sm: "FuturaPT" }}
+          // fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', sm: "FuturaPT" }}
+          fontFamily={{ md: 'Comic Neue , Roboto', sm: "Roboto" }}
         >
           This application is made about my lovely cat Persik.<br />
           My contacts: egorova.aleksandra@gmail.com

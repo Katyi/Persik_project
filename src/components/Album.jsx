@@ -21,7 +21,7 @@ const Album = () => {
         color={"#000000"}
         fontSize={{ xs: 30, sm: 50, md: 50 }}
         fontWeight={{ xs: 700, md: 900 }}
-        fontFamily={{md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
+        fontFamily={{ md: 'Comic Neue , Roboto', sm: "Roboto" }}
         pl={'3%'}
         pt={4}
       >
@@ -31,7 +31,7 @@ const Album = () => {
         color={"#000000"}
         fontSize={20}
         fontWeight={300}
-        fontFamily={'FuturaPT'}
+        fontFamily={'Roboto'}
         pl={'3%'}
       >
         A small portion of the photos with Persik

@@ -57,8 +57,8 @@ const Main = () => {
           <Typography
             color={{xs: "white", md: "black"}}
             fontSize={{ xs: 30, sm: 50, md: 50 }}
-            fontWeight={{ xs: 700, md: 900 }}
-            fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', sm: "FuturaPT" }}
+            fontWeight={{ xs: 700, md: 600 }}
+            fontFamily={{ md: 'Shantell Sans', sm: "Roboto" }}
           >
             Персик - серебристый пушистый кот
           </Typography>
@@ -66,8 +66,8 @@ const Main = () => {
           <Typography
             color={{xs: "white", md: "black"}}
             fontSize={{xs: 20, sm: 25, md: 30}}
-            fontWeight={{ xs: 700, md: 900 }}
-            fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
+            fontWeight={{ xs: 700, md: 500 }}
+            fontFamily={{ md: 'Shantell Sans', xs: "Roboto" }}
             width={{ md: 700, sm: 500 }}
             style={{wordWrap: "break-all"}}
           >
@@ -87,7 +87,7 @@ const Main = () => {
               variant='outlined'
               sx={{
                 color: '#fff', backgroundColor: '#000', borderColor: '#000',
-                fontFamily: { md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" },
+                fontFamily: { md: 'Shantell Sans', xs: "Roboto" },
                 fontSize: {md:18, sx: 10},
                 fontWeight: {md:400, sx: 200},
                 width: {md:180, xs: 100},
@@ -98,7 +98,7 @@ const Main = () => {
             <Button onClick={() => navigate('/Persik_project/album')} variant="contained"
               sx={{
                 color: '#000', backgroundColor: '#f0f0f0', borderColor: 'transparent',
-                fontFamily: { md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" },
+                fontFamily: { md: 'Shantell Sans', xs: "Roboto" },
                 fontSize: {md:18, sx: 10},
                 fontWeight: {md:400, sx: 200},
                 width: {md:180, xs: 100},
@@ -217,8 +217,8 @@ const Main = () => {
         >
           <Typography
             fontSize={{ md: 40, sm: 40, xs: 23 }}
-            fontWeight={{md: 900, sm: 800, xs: 700}}
-            fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
+            fontWeight={{md: 500, sm: 400, xs: 700}}
+            fontFamily={{ md: 'Shantell Sans', xs: "Roboto" }}
             textAlign={"center"}
           >
             История Персика
@@ -234,9 +234,9 @@ const Main = () => {
           </Box>
           <Typography
             fontSize={{ xl: 20.5, lg: 15, md: 15, sm: 15, sx: 15 }}
-            fontWeight={{xl: 500, lg: 400, md: 300, xs: 400}}
+            fontWeight={{xl: 400, lg: 400, md: 300, xs: 400}}
             lineHeight={2}
-            fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
+            fontFamily={{ md: 'Shantell Sans', xs: "Roboto" }}
           >
             Персик у нас появился случайно, когда мы ехали на дачу мимо базара, где женщина
             раздавала котят от персидской кошки, но их папа был дворовый кот

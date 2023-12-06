@@ -40,8 +40,8 @@ const Navbar = () => {
           <Avatar sx={{ width: 60, height: 60, display: { xs: "none", sm: "block" } }} src={Myimage} />
           <Typography
             variant='h4'
-            fontFamily='Comic Sans MS,Comic Sans,fantasy'
-            fontWeight={900}
+            fontFamily='Comic Neue, Roboto'
+            fontWeight={700}
             sx={{ display: { xs: "none", sm: "block" } }}
           >
             My Cat Persik
@@ -54,7 +54,7 @@ const Navbar = () => {
             variant="body2"
             sx={{
               color: '#000',
-              fontFamily: { md: 'Comic Sans MS,Comic Sans,fantasy', sm: "FuturaPT" },
+              fontFamily: { md: 'Comic Neue , Roboto', sm: "Roboto" },
               fontSize: { md: 25, sm: 25 },
               fontWeight: { md: 400, sm: 400 },
               display: { xs: "none", sm: "block" },
@@ -90,7 +90,7 @@ const Navbar = () => {
             variant='span'
             fontSize={30}
             fontWeight={900}
-            fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
+            fontFamily={{ md: 'Comic Neue , Roboto', xs: "Roboto" }}
             sx={{ display: { xs: "block", sm: "none" } }}
           >
             My Cat Persik

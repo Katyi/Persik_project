@@ -33,7 +33,7 @@ const Footer = () => {
         justifyContent={"space-between"}
         gap={{ md: 10, xs: 1 }}
         fontSize={14}
-        fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
+        fontFamily={{ md: 'Comic Neue , Roboto', sm: "Roboto" }}
         fontWeight={500}
       >
         <Typography fontWeight={300} >Copyright © 2022, Persik ­­­­­­Cat. All rights reserved.</Typography>
