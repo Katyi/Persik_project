@@ -125,10 +125,10 @@ const Main = () => {
           <Typography
             sx={{
               position: "absolute",
-              right: {xs:"10%", md: "3%"},
+              right: {xs: "8%", md:"5%", lg: "3%"},
               transform: {xs: 'translateY(-15vh) rotate(90deg)', md: 'translateY(-40vh) rotate(90deg)'},
               height: "140px",
-              fontSize: {xs: 12, md: 16}, 
+              fontSize: {xs: 12, lg: 16}, 
               fontWeight: 700,
               color: "#ff8562",
               cursor: "pointer"
@@ -189,8 +189,8 @@ const Main = () => {
             <Typography
               sx={{
                 width: "100%",
-                height:"35%",
-                fontSize: 16, 
+                height:"30%",
+                fontSize: {md: 12, lg:16},
                 fontWeight: 700,
                 color: "#ff8562",
                 transform: 'rotate(270deg)',

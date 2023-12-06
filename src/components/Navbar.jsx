@@ -11,9 +11,9 @@ const StyledToolbar = styled(Toolbar)({
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
-  height: '10vh',
   paddingTop: '10px',
-  paddingBottom: '10px'
+  paddingBottom: '10px',
+  ['@media (max-width:780px)']: { paddingBottom: '5px', paddingTop: '5px'},
 });
 
 const Icons = styled(Box)(() => ({
@@ -67,7 +67,7 @@ const Navbar = () => {
         }
         {/* in smaller screens */}
         {/* only in aboit and album pages */}
-        <UserBox sx={{ display: { xs: "flex", sm: "none" } }}>
+        <UserBox sx={{ display: { xs: "flex", sm: "none" }, width: "25%" }}>
           {(pathName === 'about' || pathName === 'album') &&
             <Link
               component="button"
@@ -92,7 +92,6 @@ const Navbar = () => {
             fontWeight={900}
             fontFamily={{ md: 'Comic Sans MS,Comic Sans,fantasy', xs: "FuturaPT" }}
             sx={{ display: { xs: "block", sm: "none" } }}
-            pr={"5%"}
           >
             My Cat Persik
           </Typography>

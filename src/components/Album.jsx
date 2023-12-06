@@ -105,7 +105,7 @@ const Album = () => {
       {/* SCROLL UP */}
       {/* <Box> */}
       <Typography
-        mt={5}
+        mt={1}
         ml={"3%"}
         sx={{
           width: "150px",
