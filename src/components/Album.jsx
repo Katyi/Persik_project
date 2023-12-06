@@ -29,7 +29,7 @@ const Album = () => {
       </Typography>
       <Typography
         color={"#000000"}
-        fontSize={20}
+        fontSize={{xs:16, md:20}}
         fontWeight={300}
         fontFamily={'Roboto'}
         pl={'3%'}
