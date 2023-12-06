@@ -7,9 +7,16 @@ const Footer = () => {
   let navigate = useNavigate();
   const location = useLocation();
   const pathName = location.pathname.split("/")[2];
+  console.log(pathName)
+  
   return (
     <Box 
-      bgcolor='#F5F3F1'
+      sx={{
+        backgroundColor: pathName === 'about' ? "transparent" : "#F5F3F1",
+        position: pathName === 'about' ? 'absolute' : "", 
+        bottom: pathName=== 'about' ? 0 : "", 
+        width: "100%"
+      }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +31,7 @@ const Footer = () => {
       </svg>
       <Stack direction={{ md: 'row', xs: "column" }}
         bgcolor={'#faf8f6'}
-        height={200} 
+        // height={200} 
         mt={-1}
         pl={{ md: 10, xs: 2 }}
         pr={{ md: 10, xs: 2 }}
