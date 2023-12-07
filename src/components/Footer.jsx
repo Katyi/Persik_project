@@ -32,7 +32,7 @@ const Footer = () => {
       <Stack direction={{ md: 'row', xs: "column" }}
         bgcolor={'#faf8f6'}
         // height={200} 
-        pt={-1}
+        mt={-1}
         pl={{ md: 10, xs: 2 }}
         pr={{ md: 10, xs: 2 }}
         pb={5}
