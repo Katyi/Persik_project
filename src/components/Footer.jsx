@@ -14,7 +14,7 @@ const Footer = () => {
       sx={{
         backgroundColor: pathName === 'about' ? "transparent" : "#F5F3F1",
         position: pathName === 'about' ? 'absolute' : "", 
-        bottom: pathName=== 'about' ? 0 : "", 
+        bottom: pathName === 'about' ? 0 : "", 
         width: "100%"
       }}
     >
@@ -32,7 +32,7 @@ const Footer = () => {
       <Stack direction={{ md: 'row', xs: "column" }}
         bgcolor={'#faf8f6'}
         // height={200} 
-        mt={-1}
+        pt={-1}
         pl={{ md: 10, xs: 2 }}
         pr={{ md: 10, xs: 2 }}
         pb={5}
