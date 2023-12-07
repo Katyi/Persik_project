@@ -4,7 +4,7 @@ import { Box, CardMedia, Stack, Typography } from "@mui/material";
 const About = () => {
   return (
     <Box
-      height={'80vh'}
+      height={'70vh'}
       bgcolor={'#F5F3F1'}
     >
       <Stack

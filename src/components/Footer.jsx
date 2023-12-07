@@ -12,7 +12,8 @@ const Footer = () => {
   return (
     <Box 
       sx={{
-        backgroundColor: pathName === 'about' ? "transparent" : "#F5F3F1",
+        // backgroundColor: pathName === 'about' ? "transparent" : "#F5F3F1",
+        backgroundColor: "#F5F3F1",
         position: pathName === 'about' ? 'absolute' : "", 
         bottom: pathName === 'about' ? 0 : "", 
         width: "100%"
