@@ -6,13 +6,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Footer = () => {
   let navigate = useNavigate();
   const location = useLocation();
-  const pathName = location.pathname.split("/")[2];
+  const pathName = location.pathname.split("/")[1];
   console.log(pathName)
   
   return (
     <Box 
       sx={{
-        // backgroundColor: pathName === 'about' ? "transparent" : "#F5F3F1",
         backgroundColor: "#F5F3F1",
         position: pathName === 'about' ? 'absolute' : "", 
         bottom: pathName === 'about' ? 0 : "", 
@@ -55,7 +54,7 @@ const Footer = () => {
               fontSize: 20,
               textDecoration: "none",
             }}
-            onClick={() => navigate('/Persik_project')}
+            onClick={() => navigate('/')}
         >
           Home
         </Link>
@@ -70,7 +69,7 @@ const Footer = () => {
               fontSize: 20,
               textDecoration: "none",
             }}
-            onClick={() => navigate('/Persik_project/about')}
+            onClick={() => navigate('/about')}
         >
           About
         </Link>
@@ -85,7 +84,7 @@ const Footer = () => {
               fontSize: 20,
               textDecoration: "none",
             }}
-            onClick={() => navigate('/Persik_project/album')}
+            onClick={() => navigate('/album')}
         >
           Photos
         </Link>

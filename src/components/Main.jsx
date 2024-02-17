@@ -83,7 +83,7 @@ const Main = () => {
             direction="row" 
             gap={{md:6, xs: 2}}
           >
-            <Button onClick={() => navigate('/Persik_project/about')}
+            <Button onClick={() => navigate('/about')}
               variant='outlined'
               sx={{
                 color: '#fff', backgroundColor: '#000', borderColor: '#000',
@@ -95,7 +95,7 @@ const Main = () => {
               }}>
               ABOUT
             </Button>
-            <Button onClick={() => navigate('/Persik_project/album')} variant="contained"
+            <Button onClick={() => navigate('/album')} variant="contained"
               sx={{
                 color: '#000', backgroundColor: '#f0f0f0', borderColor: 'transparent',
                 fontFamily: { md: 'Shantell Sans', xs: "Roboto" },

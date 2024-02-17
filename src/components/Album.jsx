@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import imagesList from "../imagesList";
-import { Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Stack, Typography } from "@mui/material";
-import { Favorite, FavoriteBorder, Share } from "@mui/icons-material";
+import { Box, Card, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Stack, Typography } from "@mui/material";
+import { Favorite, FavoriteBorder } from "@mui/icons-material";
 
 const Album = () => {
   const top = useRef(null);

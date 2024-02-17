@@ -12,8 +12,7 @@ const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between",
   alignItems: "center",
   paddingTop: '10px',
-  paddingBottom: '10px',
-  ['@media (max-width:780px)']: { paddingBottom: '5px', paddingTop: '5px'},
+  paddingBottom: '10px'
 });
 
 const Icons = styled(Box)(() => ({
@@ -31,7 +30,7 @@ const UserBox = styled(Box)(() => ({
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const pathName = location.pathname.split("/")[2];
+  const pathName = location.pathname.split("/")[1];
   return (
     <AppBar position='sticky'>
       {/* in screens bigger */}
@@ -60,7 +59,7 @@ const Navbar = () => {
               display: { xs: "none", sm: "block" },
               textDecoration: "none",
             }}
-            onClick={() => navigate('/Persik_project')}
+            onClick={() => navigate('/')}
           >
             Back to Main Page
           </Link>
@@ -77,7 +76,7 @@ const Navbar = () => {
                 color: '#000',
                 display: { xs: "block", sm: "none" }
               }}
-              onClick={() => navigate('/Persik_project')}
+              onClick={() => navigate('/')}
             >
               <ArrowBack/>
             </Link>
